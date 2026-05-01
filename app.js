@@ -1,5 +1,5 @@
 
-const COMMENTARY_SOURCE_URL = "data/commentary_template.csv";
+const COMMENTARY_SOURCE_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTpjRX4vWQj-oIL-ujE7mK3DVPhTeHqkZFQ9uXx5YVP6MMzxr9CSxLVrg6y2dNjrCuj2ZLW7Lvyj4R2/pub?gid=602268290&single=true&output=csv";
 // Replace the line above with your Google Sheets published CSV URL later.
 
 
