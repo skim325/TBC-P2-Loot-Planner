@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TBC Phase 2 Loot Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="version-tag" id="versionTag">v1.0.0 · local</div>
+<div class="hero-logo-wrap"><img class="guild-logo" src="Assets/guild-logo.png" alt="Guild logo"></div>
+<div class="hero-text">
+    <h1>TBC Phase 2 Loot Planner</h1>
+    <p>Team Stabby Loot Council Planner. Structured loot tables with priority tracking, commentary, and tag-based filtering.</p>
+  </div>
+    </section>
+
+    <div class="toolbar">
+      <input id="search" type="text" placeholder="Search item, notes, priority, ID..." />
+      <input id="bossFilter" type="text" placeholder="Filter by boss name..." />
+    </div>
+
+    <div class="raid-tabs" id="raidTabs"></div>
+
+    <main id="app"></main>
+  </div>
+
+  <script src="app.js"></script>
+
+  <script>
+    var whTooltips = {
+      colorLinks: true,
+      iconizeLinks: false,
+      renameLinks: false
+    };
+  </script>
+  <script src="https://wow.zamimg.com/widgets/power.js"></script>
+
+</body>
+</html>
