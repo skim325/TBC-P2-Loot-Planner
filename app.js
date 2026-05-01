@@ -645,10 +645,4 @@ async function init() {
   document.getElementById("bossFilter").addEventListener("input", render);
 }
 
-raid.bosses.sort((a, b) => {
-  if (a.name === "Trash") return 1;
-  if (b.name === "Trash") return -1;
-  return 0;
-});
-
 init();

@@ -440,107 +440,6 @@
       "source": "AtlasLoot data-tbc.lua",
       "bosses": [
         {
-          "name": "Trash",
-          "loot": [
-            {
-              "item_id": 30024,
-              "name": "Mantle of the Elven Kings"
-            },
-            {
-              "item_id": 30020,
-              "name": "Fire-Cord of the Magus"
-            },
-            {
-              "item_id": 30029,
-              "name": "Bark-Gloves of Ancient Wisdom"
-            },
-            {
-              "item_id": 30026,
-              "name": "Bands of the Celestial Archer"
-            },
-            {
-              "item_id": 30030,
-              "name": "Girdle of Fallen Stars"
-            },
-            {
-              "item_id": 30028,
-              "name": "Seventh Ring of the Tirisfalen"
-            },
-            {
-              "item_id": 30324,
-              "name": "Plans: Red Havoc Boots"
-            },
-            {
-              "item_id": 30322,
-              "name": "Plans: Red Belt of Battle"
-            },
-            {
-              "item_id": 30323,
-              "name": "Plans: Boots of the Protector"
-            },
-            {
-              "item_id": 30321,
-              "name": "Plans: Belt of the Guardian"
-            },
-            {
-              "item_id": 30280,
-              "name": "Pattern: Belt of Blasting"
-            },
-            {
-              "item_id": 30282,
-              "name": "Pattern: Boots of Blasting"
-            },
-            {
-              "item_id": 30283,
-              "name": "Pattern: Boots of the Long Road"
-            },
-            {
-              "item_id": 30281,
-              "name": "Pattern: Belt of the Long Road"
-            },
-            {
-              "item_id": 30308,
-              "name": "Pattern: Hurricane Boots"
-            },
-            {
-              "item_id": 30304,
-              "name": "Pattern: Monsoon Belt"
-            },
-            {
-              "item_id": 30305,
-              "name": "Pattern: Boots of Natural Grace"
-            },
-            {
-              "item_id": 30307,
-              "name": "Pattern: Boots of the Crimson Hawk"
-            },
-            {
-              "item_id": 30306,
-              "name": "Pattern: Boots of Utter Darkness"
-            },
-            {
-              "item_id": 30301,
-              "name": "Pattern: Belt of Natural Power"
-            },
-            {
-              "item_id": 30303,
-              "name": "Pattern: Belt of the Black Eagle"
-            },
-            {
-              "item_id": 30302,
-              "name": "Pattern: Belt of Deep Shadow"
-            },
-            {
-              "item_id": 30183,
-              "name": "Nether Vortex"
-            },
-            {
-              "item_id": 32897,
-              "name": "Mark of the Illidari"
-            }
-          ]
-        },
-        {
           "name": "Al'ar",
           "loot": [
             {
@@ -773,6 +672,35 @@
             {
               "item_id": 29905,
               "name": "Kael's Vial Remnant"
+            }
+          ]
+        },
+        {
+          "name": "Trash",
+          "loot": [
+            {
+              "item_id": 30024,
+              "name": "Mantle of the Elven Kings"
+            },
+            {
+              "item_id": 30020,
+              "name": "Fire-Cord of the Magus"
+            },
+            {
+              "item_id": 30029,
+              "name": "Bark-Gloves of Ancient Wisdom"
+            },
+            {
+              "item_id": 30026,
+              "name": "Bands of the Celestial Archer"
+            },
+            {
+              "item_id": 30030,
+              "name": "Girdle of Fallen Stars"
+            },
+            {
+              "item_id": 30028,
+              "name": "Seventh Ring of the Tirisfalen"
             }
           ]
         }
