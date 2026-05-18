@@ -381,19 +381,6 @@ code { color: #d6ebff; }
   position: relative;
 }
 
-.version-tag {
-  position: absolute;
-  top: 10px;
-  right: 14px;
-  font-size: 11px;
-  color: rgba(255,255,255,0.45);
-  background: rgba(255,255,255,0.04);
-  padding: 2px 6px;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.08);
-  letter-spacing: 0.4px;
-  pointer-events: none;
-}
 
 /* Boss header alignment */
 .boss-head {

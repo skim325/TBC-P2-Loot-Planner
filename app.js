@@ -3,24 +3,6 @@ const COMMENTARY_SOURCE_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1v
 // Replace the line above with your Google Sheets published CSV URL later.
 
 
-async function loadAppConfig() {
-  const el = document.getElementById("versionTag");
-  if (!el) return;
-
-  try {
-    const res = await fetch(`data/app-config.json?cacheBust=${Date.now()}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const cfg = await res.json();
-
-    const version = cfg.version ? `v${cfg.version}` : "v1.0.0";
-    const commit = cfg.commit ? String(cfg.commit).slice(0, 7) : "local";
-    el.textContent = `${version} · ${commit}`;
-    el.title = cfg.label ? `${cfg.label} build ${version} (${commit})` : `Build ${version} (${commit})`;
-  } catch (err) {
-    el.textContent = "v1.0.0 · local";
-    el.title = "Local build";
-  }
-}
 
 const state = {
   loot: null,
@@ -658,7 +640,6 @@ function render() {
 }
 
 async function init() {
-  loadAppConfig();
   await loadData();
   makeTabs();
   render();
