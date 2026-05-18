@@ -1,0 +1,710 @@
+{
+  "raids": [
+    {
+      "id": "ssc",
+      "name": "Serpentshrine Cavern",
+      "source": "AtlasLoot data-tbc.lua",
+      "bosses": [
+        {
+          "name": "Hydross the Unstable",
+          "loot": [
+            {
+              "item_id": 30056,
+              "name": "Robe of Hateful Echoes"
+            },
+            {
+              "item_id": 32516,
+              "name": "Wraps of Purification"
+            },
+            {
+              "item_id": 30050,
+              "name": "Boots of the Shifting Nightmare"
+            },
+            {
+              "item_id": 30055,
+              "name": "Shoulderpads of the Stranger"
+            },
+            {
+              "item_id": 30047,
+              "name": "Blackfathom Warbands"
+            },
+            {
+              "item_id": 30054,
+              "name": "Ranger-General's Chestguard"
+            },
+            {
+              "item_id": 30048,
+              "name": "Brighthelm of Justice"
+            },
+            {
+              "item_id": 30053,
+              "name": "Pauldrons of the Wardancer"
+            },
+            {
+              "item_id": 30052,
+              "name": "Ring of Lethality"
+            },
+            {
+              "item_id": 33055,
+              "name": "Band of Vile Aggression"
+            },
+            {
+              "item_id": 30664,
+              "name": "Living Root of the Wildheart"
+            },
+            {
+              "item_id": 30629,
+              "name": "Scarab of Displacement"
+            },
+            {
+              "item_id": 30049,
+              "name": "Fathomstone"
+            },
+            {
+              "item_id": 30051,
+              "name": "Idol of the Crescent Goddess"
+            }
+          ]
+        },
+        {
+          "name": "The Lurker Below",
+          "loot": [
+            {
+              "item_id": 30064,
+              "name": "Cord of Screaming Terrors"
+            },
+            {
+              "item_id": 30067,
+              "name": "Velvet Boots of the Guardian"
+            },
+            {
+              "item_id": 30062,
+              "name": "Grove-Bands of Remulos"
+            },
+            {
+              "item_id": 30060,
+              "name": "Boots of Effortless Striking"
+            },
+            {
+              "item_id": 30066,
+              "name": "Tempest-Strider Boots"
+            },
+            {
+              "item_id": 30065,
+              "name": "Glowing Breastplate of Truth"
+            },
+            {
+              "item_id": 30057,
+              "name": "Bracers of Eradication"
+            },
+            {
+              "item_id": 30059,
+              "name": "Choker of Animalistic Fury"
+            },
+            {
+              "item_id": 30061,
+              "name": "Ancestral Ring of Conquest"
+            },
+            {
+              "item_id": 33054,
+              "name": "The Seal of Danzalar"
+            },
+            {
+              "item_id": 30665,
+              "name": "Earring of Soulful Meditation"
+            },
+            {
+              "item_id": 30063,
+              "name": "Libram of Absolute Truth"
+            },
+            {
+              "item_id": 30058,
+              "name": "Mallet of the Tides"
+            }
+          ]
+        },
+        {
+          "name": "Leotheras the Blind",
+          "loot": [
+            {
+              "item_id": 30092,
+              "name": "Orca-Hide Boots"
+            },
+            {
+              "item_id": 30097,
+              "name": "Coral-Barbed Shoulderpads"
+            },
+            {
+              "item_id": 30091,
+              "name": "True-Aim Stalker Bands"
+            },
+            {
+              "item_id": 30096,
+              "name": "Girdle of the Invulnerable"
+            },
+            {
+              "item_id": 30627,
+              "name": "Tsunami Talisman"
+            },
+            {
+              "item_id": 30095,
+              "name": "Fang of the Leviathan"
+            },
+            {
+              "item_id": 30239,
+              "name": "Gloves of the Vanquished Champion"
+            },
+            {
+              "item_id": 30240,
+              "name": "Gloves of the Vanquished Defender"
+            },
+            {
+              "item_id": 30241,
+              "name": "Gloves of the Vanquished Hero"
+            }
+          ]
+        },
+        {
+          "name": "Fathom-Lord Karathress",
+          "loot": [
+            {
+              "item_id": 30100,
+              "name": "Soul-Strider Boots"
+            },
+            {
+              "item_id": 30101,
+              "name": "Bloodsea Brigand's Vest"
+            },
+            {
+              "item_id": 30099,
+              "name": "Frayed Tether of the Drowned"
+            },
+            {
+              "item_id": 30663,
+              "name": "Fathom-Brooch of the Tidewalker"
+            },
+            {
+              "item_id": 30626,
+              "name": "Sextant of Unstable Currents"
+            },
+            {
+              "item_id": 30090,
+              "name": "World Breaker"
+            },
+            {
+              "item_id": 30245,
+              "name": "Leggings of the Vanquished Champion"
+            },
+            {
+              "item_id": 30246,
+              "name": "Leggings of the Vanquished Defender"
+            },
+            {
+              "item_id": 30247,
+              "name": "Leggings of the Vanquished Hero"
+            }
+          ]
+        },
+        {
+          "name": "Morogrim Tidewalker",
+          "loot": [
+            {
+              "item_id": 30098,
+              "name": "Razor-Scale Battlecloak"
+            },
+            {
+              "item_id": 30079,
+              "name": "Illidari Shoulderpads"
+            },
+            {
+              "item_id": 30075,
+              "name": "Gnarled Chestpiece of the Ancients"
+            },
+            {
+              "item_id": 30085,
+              "name": "Mantle of the Tireless Tracker"
+            },
+            {
+              "item_id": 30068,
+              "name": "Girdle of the Tidal Call"
+            },
+            {
+              "item_id": 30084,
+              "name": "Pauldrons of the Argent Sentinel"
+            },
+            {
+              "item_id": 30081,
+              "name": "Warboots of Obliteration"
+            },
+            {
+              "item_id": 30008,
+              "name": "Pendant of the Lost Ages"
+            },
+            {
+              "item_id": 30083,
+              "name": "Ring of Sundered Souls"
+            },
+            {
+              "item_id": 33058,
+              "name": "Band of the Vigilant"
+            },
+            {
+              "item_id": 30720,
+              "name": "Serpent-Coil Braid"
+            },
+            {
+              "item_id": 30082,
+              "name": "Talon of Azshara"
+            },
+            {
+              "item_id": 30080,
+              "name": "Luminescent Rod of the Naaru"
+            }
+          ]
+        },
+        {
+          "name": "Lady Vashj",
+          "loot": [
+            {
+              "item_id": 30107,
+              "name": "Vestments of the Sea-Witch"
+            },
+            {
+              "item_id": 30111,
+              "name": "Runetotem's Mantle"
+            },
+            {
+              "item_id": 30106,
+              "name": "Belt of One-Hundred Deaths"
+            },
+            {
+              "item_id": 30104,
+              "name": "Cobra-Lash Boots"
+            },
+            {
+              "item_id": 30102,
+              "name": "Krakken-Heart Breastplate"
+            },
+            {
+              "item_id": 30112,
+              "name": "Glorious Gauntlets of Crestfall"
+            },
+            {
+              "item_id": 30109,
+              "name": "Ring of Endless Coils"
+            },
+            {
+              "item_id": 30110,
+              "name": "Coral Band of the Revived"
+            },
+            {
+              "item_id": 30621,
+              "name": "Prism of Inner Calm"
+            },
+            {
+              "item_id": 30103,
+              "name": "Fang of Vashj"
+            },
+            {
+              "item_id": 30108,
+              "name": "Lightfathom Scepter"
+            },
+            {
+              "item_id": 30105,
+              "name": "Serpent Spine Longbow"
+            },
+            {
+              "item_id": 30242,
+              "name": "Helm of the Vanquished Champion"
+            },
+            {
+              "item_id": 30243,
+              "name": "Helm of the Vanquished Defender"
+            },
+            {
+              "item_id": 30244,
+              "name": "Helm of the Vanquished Hero"
+            },
+            {
+              "item_id": 29906,
+              "name": "Vashj's Vial Remnant"
+            }
+          ]
+        },
+        {
+          "name": "Trash",
+          "loot": [
+            {
+              "item_id": 30027,
+              "name": "Boots of Courage Unending"
+            },
+            {
+              "item_id": 30022,
+              "name": "Pendant of the Perilous"
+            },
+            {
+              "item_id": 30620,
+              "name": "Spyglass of the Hidden Fleet"
+            },
+            {
+              "item_id": 30023,
+              "name": "Totem of the Maelstrom"
+            },
+            {
+              "item_id": 30021,
+              "name": "Wildfury Greatstaff"
+            },
+            {
+              "item_id": 30025,
+              "name": "Serpentshrine Shuriken"
+            },
+            {
+              "item_id": 30324,
+              "name": "Plans: Red Havoc Boots"
+            },
+            {
+              "item_id": 30322,
+              "name": "Plans: Red Belt of Battle"
+            },
+            {
+              "item_id": 30323,
+              "name": "Plans: Boots of the Protector"
+            },
+            {
+              "item_id": 30321,
+              "name": "Plans: Belt of the Guardian"
+            },
+            {
+              "item_id": 30280,
+              "name": "Pattern: Belt of Blasting"
+            },
+            {
+              "item_id": 30282,
+              "name": "Pattern: Boots of Blasting"
+            },
+            {
+              "item_id": 30283,
+              "name": "Pattern: Boots of the Long Road"
+            },
+            {
+              "item_id": 30281,
+              "name": "Pattern: Belt of the Long Road"
+            },
+            {
+              "item_id": 30308,
+              "name": "Pattern: Hurricane Boots"
+            },
+            {
+              "item_id": 30304,
+              "name": "Pattern: Monsoon Belt"
+            },
+            {
+              "item_id": 30305,
+              "name": "Pattern: Boots of Natural Grace"
+            },
+            {
+              "item_id": 30307,
+              "name": "Pattern: Boots of the Crimson Hawk"
+            },
+            {
+              "item_id": 30306,
+              "name": "Pattern: Boots of Utter Darkness"
+            },
+            {
+              "item_id": 30301,
+              "name": "Pattern: Belt of Natural Power"
+            },
+            {
+              "item_id": 30303,
+              "name": "Pattern: Belt of the Black Eagle"
+            },
+            {
+              "item_id": 30302,
+              "name": "Pattern: Belt of Deep Shadow"
+            },
+            {
+              "item_id": 30183,
+              "name": "Nether Vortex"
+            },
+            {
+              "item_id": 32897,
+              "name": "Mark of the Illidari"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tk",
+      "name": "Tempest Keep: The Eye",
+      "source": "AtlasLoot data-tbc.lua",
+      "bosses": [
+        {
+          "name": "Al'ar",
+          "loot": [
+            {
+              "item_id": 29925,
+              "name": "Phoenix-Wing Cloak"
+            },
+            {
+              "item_id": 29918,
+              "name": "Mindstorm Wristbands"
+            },
+            {
+              "item_id": 29947,
+              "name": "Gloves of the Searing Grip"
+            },
+            {
+              "item_id": 29921,
+              "name": "Fire Crest Breastplate"
+            },
+            {
+              "item_id": 29922,
+              "name": "Band of Al'ar"
+            },
+            {
+              "item_id": 29920,
+              "name": "Phoenix-Ring of Rebirth"
+            },
+            {
+              "item_id": 30448,
+              "name": "Talon of Al'ar"
+            },
+            {
+              "item_id": 30447,
+              "name": "Tome of Fiery Redemption"
+            },
+            {
+              "item_id": 29923,
+              "name": "Talisman of the Sun King"
+            },
+            {
+              "item_id": 32944,
+              "name": "Talon of the Phoenix"
+            },
+            {
+              "item_id": 29948,
+              "name": "Claw of the Phoenix"
+            },
+            {
+              "item_id": 29924,
+              "name": "Netherbane"
+            },
+            {
+              "item_id": 29949,
+              "name": "Arcanite Steam-Pistol"
+            }
+          ]
+        },
+        {
+          "name": "Void Reaver",
+          "loot": [
+            {
+              "item_id": 29986,
+              "name": "Cowl of the Grand Engineer"
+            },
+            {
+              "item_id": 29984,
+              "name": "Girdle of Zaetar"
+            },
+            {
+              "item_id": 29985,
+              "name": "Void Reaver Greaves"
+            },
+            {
+              "item_id": 29983,
+              "name": "Fel-Steel Warhelm"
+            },
+            {
+              "item_id": 32515,
+              "name": "Wristguards of Determination"
+            },
+            {
+              "item_id": 30619,
+              "name": "Fel Reaver's Piston"
+            },
+            {
+              "item_id": 30450,
+              "name": "Warp-Spring Coil"
+            },
+            {
+              "item_id": 30248,
+              "name": "Pauldrons of the Vanquished Champion"
+            },
+            {
+              "item_id": 30249,
+              "name": "Pauldrons of the Vanquished Defender"
+            },
+            {
+              "item_id": 30250,
+              "name": "Pauldrons of the Vanquished Hero"
+            }
+          ]
+        },
+        {
+          "name": "High Astromancer Solarian",
+          "loot": [
+            {
+              "item_id": 29977,
+              "name": "Star-Soul Breeches"
+            },
+            {
+              "item_id": 29972,
+              "name": "Trousers of the Astromancer"
+            },
+            {
+              "item_id": 29966,
+              "name": "Vambraces of Ending"
+            },
+            {
+              "item_id": 29976,
+              "name": "Worldstorm Gauntlets"
+            },
+            {
+              "item_id": 29951,
+              "name": "Star-Strider Boots"
+            },
+            {
+              "item_id": 29965,
+              "name": "Girdle of the Righteous Path"
+            },
+            {
+              "item_id": 29950,
+              "name": "Greaves of the Bloodwarder"
+            },
+            {
+              "item_id": 32267,
+              "name": "Boots of the Resilient"
+            },
+            {
+              "item_id": 30446,
+              "name": "Solarian's Sapphire"
+            },
+            {
+              "item_id": 30449,
+              "name": "Void Star Talisman"
+            },
+            {
+              "item_id": 29962,
+              "name": "Heartrazor"
+            },
+            {
+              "item_id": 29981,
+              "name": "Ethereum Life-Staff"
+            },
+            {
+              "item_id": 29982,
+              "name": "Wand of the Forgotten Star"
+            }
+          ]
+        },
+        {
+          "name": "Kael'thas Sunstrider",
+          "loot": [
+            {
+              "item_id": 29992,
+              "name": "Royal Cloak of the Sunstriders"
+            },
+            {
+              "item_id": 29989,
+              "name": "Sunshower Light Cloak"
+            },
+            {
+              "item_id": 29994,
+              "name": "Thalassian Wildercloak"
+            },
+            {
+              "item_id": 29990,
+              "name": "Crown of the Sun"
+            },
+            {
+              "item_id": 29987,
+              "name": "Gauntlets of the Sun King"
+            },
+            {
+              "item_id": 29995,
+              "name": "Leggings of Murderous Intent"
+            },
+            {
+              "item_id": 29991,
+              "name": "Sunhawk Leggings"
+            },
+            {
+              "item_id": 29998,
+              "name": "Royal Gauntlets of Silvermoon"
+            },
+            {
+              "item_id": 29997,
+              "name": "Band of the Ranger-General"
+            },
+            {
+              "item_id": 29993,
+              "name": "Twinblade of the Phoenix"
+            },
+            {
+              "item_id": 29996,
+              "name": "Rod of the Sun King"
+            },
+            {
+              "item_id": 29988,
+              "name": "The Nexus Key"
+            },
+            {
+              "item_id": 30236,
+              "name": "Chestguard of the Vanquished Champion"
+            },
+            {
+              "item_id": 30237,
+              "name": "Chestguard of the Vanquished Defender"
+            },
+            {
+              "item_id": 30238,
+              "name": "Chestguard of the Vanquished Hero"
+            },
+            {
+              "item_id": 32458,
+              "name": "Ashes of Al'ar"
+            },
+            {
+              "item_id": 32405,
+              "name": "Verdant Sphere"
+            },
+            {
+              "item_id": 29905,
+              "name": "Kael's Vial Remnant"
+            }
+          ]
+        },
+        {
+          "name": "Trash",
+          "loot": [
+            {
+              "item_id": 30024,
+              "name": "Mantle of the Elven Kings"
+            },
+            {
+              "item_id": 30020,
+              "name": "Fire-Cord of the Magus"
+            },
+            {
+              "item_id": 30029,
+              "name": "Bark-Gloves of Ancient Wisdom"
+            },
+            {
+              "item_id": 30026,
+              "name": "Bands of the Celestial Archer"
+            },
+            {
+              "item_id": 30030,
+              "name": "Girdle of Fallen Stars"
+            },
+            {
+              "item_id": 30028,
+              "name": "Seventh Ring of the Tirisfalen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
