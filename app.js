@@ -41,9 +41,9 @@ const classStyles = {
 };
 
 // Best-aligned sprite assumptions from the user's current preferred iteration:
-// 2 px trim from the left edge, 24 px tile width, tile 1 anchored at the far right.
+// 2 px trim from the left edge, 25 px tile width, tile 1 anchored at the far right.
 const SPRITE_LEFT_TRIM = 2;
-const SPRITE_TILE_W = 24;
+const SPRITE_TILE_W = 25;
 const SPRITE_TILE_H = 24;
 const SPRITE_SHEET_W = 2048;
 
