@@ -1,12 +1,23 @@
 
-const COMMENTARY_SOURCE_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTpjRX4vWQj-oIL-ujE7mK3DVPhTeHqkZFQ9uXx5YVP6MMzxr9CSxLVrg6y2dNjrCuj2ZLW7Lvyj4R2/pub?gid=602268290&single=true&output=csv";
-// Replace the line above with your Google Sheets published CSV URL later.
-
-
+const PHASES = {
+  p2: {
+    label: "Phase 2",
+    defaultRaid: "ssc",
+    commentaryUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTpjRX4vWQj-oIL-ujE7mK3DVPhTeHqkZFQ9uXx5YVP6MMzxr9CSxLVrg6y2dNjrCuj2ZLW7Lvyj4R2/pub?gid=602268290&single=true&output=csv"
+  },
+  p3: {
+    label: "Phase 3",
+    defaultRaid: "hyjal",
+    commentaryUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSPJm6jS9A8MyOZobiLJm1UKA6SgaO0VOfmpCH9Lebq_7buSzshsXaaXQM3-6APuw0I0seTi2iDtOZu/pub?output=csv",
+    fallbackUrl: "data/commentary_p3_bt_hyjal_with_trash.csv"
+  }
+};
 
 const state = {
   loot: null,
-  commentaryById: new Map(),
+  lootByPhase: {},
+  commentaryByPhase: {},
+  activePhase: "p2",
   activeRaid: "ssc"
 };
 
@@ -368,23 +379,96 @@ function parseCSV(text) {
   }
 }
 
-async function loadData() {
-  const loot = await fetch("data/loot.json").then(r => r.json());
-  state.loot = loot;
+function raidIdFromName(raidName) {
+  const normalized = normalizeTextForLookup(raidName);
+  if (normalized.includes("black temple")) return "bt";
+  if (normalized.includes("hyjal")) return "hyjal";
+  return normalized.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "unknown";
+}
 
-  try {
-    const csvText = await fetch(COMMENTARY_SOURCE_URL).then(r => r.text());
-    const rows = parseCSV(csvText);
-    rows.forEach(row => state.commentaryById.set(String(row.item_id), row));
-  } catch (err) {
-    console.warn("Commentary source could not be loaded:", err);
+function buildLootFromCommentaryRows(rows) {
+  const raidMap = new Map();
+
+  rows.forEach(row => {
+    const itemId = Number(row.item_id);
+    if (!itemId || !row.raid || !row.boss) return;
+
+    const raidId = raidIdFromName(row.raid);
+    if (!raidMap.has(raidId)) {
+      raidMap.set(raidId, {
+        id: raidId,
+        name: row.raid,
+        bosses: [],
+        bossMap: new Map()
+      });
+    }
+
+    const raid = raidMap.get(raidId);
+    if (!raid.bossMap.has(row.boss)) {
+      const boss = { name: row.boss, loot: [] };
+      raid.bossMap.set(row.boss, boss);
+      raid.bosses.push(boss);
+    }
+
+    raid.bossMap.get(row.boss).loot.push({
+      item_id: itemId,
+      name: row.item_name || row.name || `Item ${itemId}`
+    });
+  });
+
+  return {
+    raids: Array.from(raidMap.values()).map(raid => {
+      delete raid.bossMap;
+      return raid;
+    })
+  };
+}
+
+async function loadCommentaryForPhase(phaseKey) {
+  const phase = PHASES[phaseKey];
+  const commentaryById = new Map();
+  const urlsToTry = [phase.commentaryUrl, phase.fallbackUrl].filter(Boolean);
+  let lastError = null;
+
+  for (const url of urlsToTry) {
+    try {
+      const csvText = await fetch(url).then(r => {
+        if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+        return r.text();
+      });
+      const rows = parseCSV(csvText);
+      rows.forEach(row => {
+        if (row.item_id) commentaryById.set(String(row.item_id), row);
+      });
+      state.commentaryByPhase[phaseKey] = commentaryById;
+      return rows;
+    } catch (err) {
+      lastError = err;
+      console.warn(`${phase.label} commentary source could not be loaded from ${url}:`, err);
+    }
   }
+
+  console.warn(`${phase.label} commentary source could not be loaded.`, lastError);
+  state.commentaryByPhase[phaseKey] = commentaryById;
+  return [];
+}
+
+async function loadData() {
+  state.lootByPhase.p2 = await fetch("data/loot.json").then(r => r.json());
+  await loadCommentaryForPhase("p2");
+
+  const p3Rows = await loadCommentaryForPhase("p3");
+  state.lootByPhase.p3 = buildLootFromCommentaryRows(p3Rows);
+
+  state.loot = state.lootByPhase[state.activePhase];
 }
 
 function mergeItem(item, raidName, bossName) {
-  const c = state.commentaryById.get(String(item.item_id)) || {};
+  const commentaryById = state.commentaryByPhase[state.activePhase] || new Map();
+  const c = commentaryById.get(String(item.item_id)) || {};
   return {
     ...item,
+    name: item.name || c.item_name || `Item ${item.item_id}`,
     raid: raidName,
     boss: bossName,
     p1: c.p1 || "",
@@ -529,9 +613,54 @@ function cardTagTooltipHtml(tags) {
   return `<div class="tag-tooltip">Tags: ${escapeHtml(cleanTags)}</div>`;
 }
 
+function setActivePhase(phaseKey) {
+  if (!PHASES[phaseKey] || phaseKey === state.activePhase) return;
+
+  state.activePhase = phaseKey;
+  state.loot = state.lootByPhase[phaseKey];
+  state.activeRaid = PHASES[phaseKey].defaultRaid;
+
+  updateHeaderForPhase();
+  makeTabs();
+  render();
+}
+
+function makePhaseSelector() {
+  const selector = document.getElementById("phaseSelect");
+  if (!selector) return;
+
+  selector.innerHTML = "";
+  Object.entries(PHASES).forEach(([phaseKey, phase]) => {
+    const option = document.createElement("option");
+    option.value = phaseKey;
+    option.textContent = phase.label;
+    option.selected = phaseKey === state.activePhase;
+    selector.appendChild(option);
+  });
+
+  selector.addEventListener("change", event => setActivePhase(event.target.value));
+}
+
+function updateHeaderForPhase() {
+  const title = document.getElementById("appTitle");
+  const subtitle = document.getElementById("appSubtitle");
+  const phaseLabel = PHASES[state.activePhase]?.label || "TBC";
+
+  if (title) title.textContent = `TBC ${phaseLabel} Loot Planner`;
+  if (subtitle) {
+    subtitle.textContent = `${phaseLabel} Team Stabby Loot Council Planner. Structured loot tables with priority tracking, commentary, and tag-based filtering.`;
+  }
+}
+
 function makeTabs() {
   const tabs = document.getElementById("raidTabs");
   tabs.innerHTML = "";
+
+  if (!state.loot || !state.loot.raids || !state.loot.raids.length) {
+    tabs.innerHTML = '<div class="empty compact">No raid data loaded for this phase.</div>';
+    return;
+  }
+
   state.loot.raids.forEach(raid => {
     const btn = document.createElement("button");
     btn.className = "raid-tab" + (raid.id === state.activeRaid ? " active" : "");
@@ -637,6 +766,9 @@ function render() {
 
 async function init() {
   await loadData();
+  state.loot = state.lootByPhase[state.activePhase];
+  updateHeaderForPhase();
+  makePhaseSelector();
   makeTabs();
   render();
   document.getElementById("search").addEventListener("input", render);

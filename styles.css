@@ -34,9 +34,18 @@ body {
 .hero p { margin: 0; color: var(--muted); max-width: 1000px; }
 .toolbar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(180px, 240px) 1fr 1fr;
   gap: 12px;
   margin-bottom: 18px;
+}
+.control-group {
+  display: grid;
+  gap: 6px;
+}
+.control-group span {
+  color: var(--muted);
+  font-size: 12px;
+  padding-left: 4px;
 }
 input, select, button, .pill {
   width: 100%;
@@ -139,6 +148,10 @@ input, select, button, .pill {
   padding: 18px;
   color: var(--muted);
   background: rgba(255,255,255,.02);
+}
+.empty.compact {
+  padding: 10px 14px;
+  border-radius: 999px;
 }
 .footer-note {
   margin-top: 18px;

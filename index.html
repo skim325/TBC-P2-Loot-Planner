@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TBC Phase 2 Loot Planner</title>
+  <title>TBC Loot Planner</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -11,14 +11,24 @@
     <section class="hero">
 <div class="hero-logo-wrap"><img class="guild-logo" src="Assets/guild-logo.png" alt="Guild logo"></div>
 <div class="hero-text">
-    <h1>TBC Phase 2 Loot Planner</h1>
-    <p>Team Stabby Loot Council Planner. Structured loot tables with priority tracking, commentary, and tag-based filtering.</p>
+    <h1 id="appTitle">TBC Phase 2 Loot Planner</h1>
+    <p id="appSubtitle">Team Stabby Loot Council Planner. Structured loot tables with priority tracking, commentary, and tag-based filtering.</p>
   </div>
     </section>
 
     <div class="toolbar">
-      <input id="search" type="text" placeholder="Search item, notes, priority, ID..." />
-      <input id="bossFilter" type="text" placeholder="Filter by boss name..." />
+      <label class="control-group">
+        <span>Phase</span>
+        <select id="phaseSelect" aria-label="Select phase"></select>
+      </label>
+      <label class="control-group">
+        <span>Search</span>
+        <input id="search" type="text" placeholder="Search item, notes, priority, ID..." />
+      </label>
+      <label class="control-group">
+        <span>Boss</span>
+        <input id="bossFilter" type="text" placeholder="Filter by boss name..." />
+      </label>
     </div>
 
     <div class="raid-tabs" id="raidTabs"></div>
